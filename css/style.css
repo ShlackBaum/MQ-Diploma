@@ -40,7 +40,7 @@ button {
 /* ===========HEADER=========== */
 
 .head-container {
-	background-image: url("/images/banner-bg.jpg");
+	background-image: url("/MQ-Diploma/images/banner-bg.jpg");
 	background-size: cover;
 	position: relative;
 	padding: 30px 0;
@@ -181,22 +181,22 @@ button {
 }
 
 .trand-1 {
-	background-image: url("/images/trend1.jpg");
+	background-image: url("/MQ-Diploma/images/trend1.jpg");
 	background-size: cover;
 }
 
 .trand-2 {
-	background-image: url("/images/trend2.jpg");
+	background-image: url("/MQ-Diploma/images/trend2.jpg");
 	background-size: cover;
 }
 
 .trand-3 {
-	background-image: url("/images/trend3.jpg");
+	background-image: url("/MQ-Diploma/images/trend3.jpg");
 	background-size: cover;
 }
 
 .trand-4 {
-	background-image: url("/images/trend4.jpg");
+	background-image: url("/MQ-Diploma/images/trend4.jpg");
 	background-size: cover;
 }
 
@@ -420,7 +420,7 @@ a.blog-post-info-author {
 .aside-search-button {
 	width: 48px;
 	height: 48px;
-	background-image: url("/svg/search.svg");
+	background-image: url("/MQ-Diploma/svg/search.svg");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-color: #b59f5b;
@@ -615,24 +615,24 @@ a.blog-post-info-author {
 }
 
 .footer-twitter {
-	background-image: url("/svg/004-twitter.svg");
+	background-image: url("/MQ-Diploma/svg/004-twitter.svg");
 }
 
 .footer-pinterest {
-	background-image: url("/svg/001-pinterest.svg");
+	background-image: url("/MQ-Diploma/svg/001-pinterest.svg");
 }
 
 .footer-facebook {
-	background-image: url("/svg/002-facebook-logo.svg");
+	background-image: url("/MQ-Diploma/svg/002-facebook-logo.svg");
 	background-size: cover;
 }
 
 .footer-instagram {
-	background-image: url("/svg/005-instagram.svg");
+	background-image: url("/MQ-Diploma/svg/005-instagram.svg");
 }
 
 .footer-tumblr {
-	background-image: url("/svg/003-tumblr.svg");
+	background-image: url("/MQ-Diploma/svg/003-tumblr.svg");
 }
 
 .copyright {
