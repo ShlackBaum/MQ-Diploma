@@ -415,8 +415,8 @@
 	</div><a href class="copyright">Copyright © 2009–2019 City Blog LLC.</a>
 </footer>
 
-<div class="popup_darkness _hidden"></div>
-<div class="popup _hidden">
+<div class="popup_darkness"></div>
+<div class="popup">
 	<div class="popup-content">
 		<h2 class="popup-header">Ваш фидбек</h2>
 		<div class="popup_ask_1">Как часто вы заходите на наш сайт?</div>
@@ -427,10 +427,16 @@
 			<option>Несколько раз в год</option>
 		</select>
 		<div class="popup_ask_2">Вы подписаны на e-mail рассылку?</div>
-		<input class="popup_radio" type="radio" id="yes">
-		<label for="yes">Да</label>
-		<input class="popup_radio" type="radio" id="no">
-		<label for="no">Нет</label>
+
+		<label class="popup-radio-group">
+			<input class="popup-radio" type="radio" name="mail-radio" value="yes">
+			<span class="popup-text" for="yes">Да</span>
+		</label>
+
+		<label class="popup-radio-group">
+			<input class="popup-radio" type="radio" name="mail-radio" value="no">
+			<span class="popup-text" for="no">Нет</span>
+		</label>
 
 		<div class="popup_ask_3">Расскажите какой контент вы хотели бы видеть на нашем сайте?</div>
 		<textarea class="popup_textarea" placeholder="Может, больше рецептов?"> </textarea>
