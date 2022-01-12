@@ -12,14 +12,14 @@ body {
 @font-face {
 	font-family: OpenSans;
 	font-weight: normal;
-	src: url("https://github.com/ShlackBaum/MQ-Diploma/blob/main/fonts/OpenSans-Regular.woff");
+	src: url("/MQ-Diploma/fonts/OpenSans-Regular.woff");
 	font-style: normal;
 }
 
 @font-face {
 	font-family: OpenSans;
 	font-weight: 700;
-	src: url("https://github.com/ShlackBaum/MQ-Diploma/blob/main/fonts/OpenSans-Bold.woff");
+	src: url("/MQ-Diploma/fonts/OpenSans-Bold.woff");
 	font-style: normal;
 }
 
