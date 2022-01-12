@@ -1080,6 +1080,7 @@ a.blog-post-info-author {
 
 	.main {
 		max-width: 100%;
+		padding-right: 1px;
 	}
 
 	.main-container {
