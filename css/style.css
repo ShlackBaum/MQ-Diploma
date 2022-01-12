@@ -12,14 +12,14 @@ body {
 @font-face {
 	font-family: OpenSans;
 	font-weight: normal;
-	src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.woff");
+	src: url("https://github.com/ShlackBaum/MQ-Diploma/blob/main/fonts/OpenSans-Regular.woff?raw=true");
 	font-style: normal;
 }
 
 @font-face {
 	font-family: OpenSans;
 	font-weight: 700;
-	src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Bold.woff");
+	src: url("https://github.com/ShlackBaum/MQ-Diploma/blob/main/fonts/OpenSans-Bold.woff?raw=true");
 	font-style: normal;
 }
 
@@ -41,7 +41,7 @@ button {
 /* ===========HEADER=========== */
 
 .head-container {
-	background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg");
+	background-image: url("https://github.com/ShlackBaum/MQ-Diploma/blob/main/images/banner-bg.jpg?raw=true");
 	background-size: cover;
 	position: relative;
 	padding: 30px 0;
@@ -273,13 +273,15 @@ button {
 	width: 390px;
 	position: fixed;
 	left: calc(50% - 195px);
-	top: 10%;
 	background-color: rgb(255, 255, 255, 1);
 	z-index: 10;
+	top: 50%;
+	transform: translateY(calc(-50%));
 }
 
 .popup-content {
 	padding: 55px 30px;
+	box-sizing: border-box;
 }
 
 .popup-header {
@@ -312,10 +314,45 @@ button {
 	border: 0px;
 	padding-left: 20px;
 	margin-top: 10px;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	background-image: url("https://github.com/ShlackBaum/MQ-Diploma/blob/main/svg/form-arrows.svg?raw=true");
+	background-repeat: no-repeat;
+	background-position: right 10px center;
+	background-size: 10px;
 }
 
-.popup_radio {
+.popup-radio {
+	/* 	-moz-appearance: none;
+	-webkit-appearance: none; */
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+.popup-radio-group:not(:first-of-type) {
 	margin-left: 10px;
+}
+
+.popup-text {
+	font-size: 13px;
+}
+
+.popup-text::before {
+	content: "";
+	background-image: url("https://github.com/ShlackBaum/MQ-Diploma/blob/main/svg/form-empty-circle.svg?raw=true");
+	background-size: 20px;
+	width: 25px;
+	height: 25px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.popup-radio:checked ~ .popup-text::before {
+	background-image: url("https://github.com/ShlackBaum/MQ-Diploma/blob/main/svg/form-circle.svg?raw=true");
 }
 
 .popup_textarea {
@@ -323,6 +360,8 @@ button {
 	height: 130px;
 	background-color: #f4f7f6;
 	border: 0px;
+	resize: none;
+	margin-top: 10px;
 }
 
 ._hidden {
@@ -505,7 +544,7 @@ a.blog-post-info-author {
 .aside-search-button {
 	width: 48px;
 	height: 48px;
-	background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/search.svg");
+	background-image: url("https://github.com/ShlackBaum/MQ-Diploma/blob/main/images/search.svg?raw=true");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-color: #b59f5b;
@@ -743,24 +782,24 @@ a.blog-post-info-author {
 }
 
 .footer-twitter {
-	background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/004-twitter.svg");
+	background-image: url("https://github.com/ShlackBaum/MQ-Diploma/blob/main/images/social/004-twitter.svg?raw=true");
 }
 
 .footer-pinterest {
-	background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/001-pinterest.svg");
+	background-image: url("https://github.com/ShlackBaum/MQ-Diploma/blob/main/images/social/001-pinterest.svg?raw=true");
 }
 
 .footer-facebook {
-	background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/002-facebook-logo.svg");
+	background-image: url("https://github.com/ShlackBaum/MQ-Diploma/blob/main/images/social/002-facebook-logo.svg?raw=true");
 	background-size: cover;
 }
 
 .footer-instagram {
-	background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/005-instagram.svg");
+	background-image: url("https://github.com/ShlackBaum/MQ-Diploma/blob/main/images/social/005-instagram.svg?raw=true");
 }
 
 .footer-tumblr {
-	background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/003-tumblr.svg");
+	background-image: url("https://github.com/ShlackBaum/MQ-Diploma/blob/main/images/social/003-tumblr.svg?raw=true");
 }
 
 .copyright {
@@ -939,6 +978,10 @@ a.blog-post-info-author {
 
 	.footer {
 		margin-top: 50px;
+	}
+
+	.popup {
+		width: 325px;
 	}
 }
 
