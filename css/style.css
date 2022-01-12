@@ -12,14 +12,14 @@ body {
 @font-face {
 	font-family: OpenSans;
 	font-weight: normal;
-	src: url("/MQ-Diploma/fonts/OpenSans-Regular.woff");
+	src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.woff");
 	font-style: normal;
 }
 
 @font-face {
 	font-family: OpenSans;
 	font-weight: 700;
-	src: url("/MQ-Diploma/fonts/OpenSans-Bold.woff");
+	src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Bold.woff");
 	font-style: normal;
 }
 
@@ -37,10 +37,11 @@ button {
 	cursor: pointer;
 }
 
+/* =======================================BASIC-PC======================================== */
 /* ===========HEADER=========== */
 
 .head-container {
-	background-image: url("/MQ-Diploma/images/banner-bg.jpg");
+	background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg");
 	background-size: cover;
 	position: relative;
 	padding: 30px 0;
@@ -60,10 +61,14 @@ button {
 
 .head-container-wrapper {
 	padding: 0px 15px;
-	width: 1200px;
+	max-width: 1200px;
 	margin: auto;
 	position: relative;
 	z-index: 2;
+}
+
+.head-container-wrapper button {
+	display: none;
 }
 
 .logo-menu-flex {
@@ -99,9 +104,13 @@ button {
 	text-decoration: underline;
 }
 
+.burger {
+	display: none;
+}
+
 .header-text {
 	text-transform: uppercase;
-	width: 680px;
+	max-width: 680px;
 	padding-top: 120px;
 	padding-bottom: 145px;
 	color: white;
@@ -152,6 +161,8 @@ button {
 	z-index: 2;
 	height: 320px;
 	position: relative;
+	display: flex;
+	align-items: end;
 }
 
 .trand-box::before {
@@ -181,22 +192,22 @@ button {
 }
 
 .trand-1 {
-	background-image: url("/MQ-Diploma/images/trend1.jpg");
+	background-image: url("https://github.com/ShlackBaum/MQ-Diploma/blob/main/images/trend1.jpg?raw=true");
 	background-size: cover;
 }
 
 .trand-2 {
-	background-image: url("/MQ-Diploma/images/trend2.jpg");
+	background-image: url("https://github.com/ShlackBaum/MQ-Diploma/blob/main/images/trend2.jpg?raw=true");
 	background-size: cover;
 }
 
 .trand-3 {
-	background-image: url("/MQ-Diploma/images/trend3.jpg");
+	background-image: url("https://github.com/ShlackBaum/MQ-Diploma/blob/main/images/trend3.jpg?raw=true");
 	background-size: cover;
 }
 
 .trand-4 {
-	background-image: url("/MQ-Diploma/images/trend4.jpg");
+	background-image: url("https://github.com/ShlackBaum/MQ-Diploma/blob/main/images/trend4.jpg?raw=true");
 	background-size: cover;
 }
 
@@ -230,18 +241,92 @@ button {
 
 .main-container {
 	margin-top: 65px;
-	width: 1200px;
+	max-width: 1200px;
 	margin-left: auto;
 	margin-right: auto;
 	padding-left: 15px;
 	padding-right: 15px;
 	display: flex;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 	justify-content: space-between;
 }
 
 .main {
-	width: 780px;
+	max-width: 780px;
+	flex-grow: 1;
+	position: relative;
+}
+
+.popup_darkness {
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgb(0, 0, 0, 1);
+	opacity: 0.5;
+	width: 100%;
+	height: 100%;
+	z-index: 5;
+}
+
+.popup {
+	width: 390px;
+	position: fixed;
+	left: calc(50% - 195px);
+	top: 10%;
+	background-color: rgb(255, 255, 255, 1);
+	z-index: 10;
+}
+
+.popup-content {
+	padding: 55px 30px;
+}
+
+.popup-header {
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.popup-header::after {
+	content: "";
+	display: block;
+	background-color: #e1d9bd;
+	width: 50px;
+	height: 3px;
+	margin: 10px auto 0;
+}
+
+.popup_ask_1,
+.popup_ask_2,
+.popup_ask_3 {
+	margin-top: 25px;
+	font-size: 13px;
+}
+
+.popup_how_often {
+	width: calc(100% - 20px);
+	background-color: #f3f7f6;
+	height: 40px;
+	color: #858786;
+	border: 0px;
+	padding-left: 20px;
+	margin-top: 10px;
+}
+
+.popup_radio {
+	margin-left: 10px;
+}
+
+.popup_textarea {
+	width: 100%;
+	height: 130px;
+	background-color: #f4f7f6;
+	border: 0px;
+}
+
+._hidden {
+	display: none;
 }
 
 .blog-post {
@@ -420,7 +505,7 @@ a.blog-post-info-author {
 .aside-search-button {
 	width: 48px;
 	height: 48px;
-	background-image: url("/MQ-Diploma/svg/search.svg");
+	background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/search.svg");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-color: #b59f5b;
@@ -446,7 +531,8 @@ a.blog-post-info-author {
 	position: absolute;
 }
 
-.aside-mail-button {
+.aside-mail-button,
+.popup-mail-button {
 	background-color: #b59f5b;
 	width: 100%;
 	height: 47px;
@@ -543,12 +629,21 @@ a.blog-post-info-author {
 	font-weight: bold;
 }
 
+.good-pic {
+	width: 100%;
+	position: relative;
+	z-index: -1;
+}
+
 .good-content {
-	padding-top: 10px;
+	padding-top: 45px;
 	padding-left: 22px;
 	padding-right: 24px;
 	padding-bottom: 28px;
-	border: 3px solid #d5c9a3;
+	border: 3px solid #b59f5b;
+	margin-left: -25px;
+	margin-right: -25px;
+	margin-top: -35px;
 }
 
 .good-description {
@@ -558,7 +653,7 @@ a.blog-post-info-author {
 }
 
 .good-description-link {
-	color: #B59F5B;
+	color: #b59f5b;
 }
 
 .good-description-link:hover {
@@ -577,16 +672,49 @@ a.blog-post-info-author {
 	height: 400px;
 	position: relative;
 }
+
+.good-flex-price-button {
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	padding-top: 25px;
+	align-items: center;
+	height: 50px;
+}
+
+.good-old-price {
+	font-weight: bold;
+	text-decoration: line-through;
+	font-size: 14px;
+}
+
+.good-price {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.good-button {
+	background-color: #b59f5b;
+	color: white;
+	text-transform: uppercase;
+	width: 140px;
+	height: 50px;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	border: 0px;
+}
+
 /* ===========FOOTER=========== */
 
 .footer {
-	margin-top: 60px;
+	margin-top: 110px;
 }
 
 .footer-wrapper {
 	margin: auto;
 	padding: 0 15px;
-	width: 1200px;
+	max-width: 1200px;
 }
 
 .footer-social {
@@ -615,24 +743,24 @@ a.blog-post-info-author {
 }
 
 .footer-twitter {
-	background-image: url("/MQ-Diploma/svg/004-twitter.svg");
+	background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/004-twitter.svg");
 }
 
 .footer-pinterest {
-	background-image: url("/MQ-Diploma/svg/001-pinterest.svg");
+	background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/001-pinterest.svg");
 }
 
 .footer-facebook {
-	background-image: url("/MQ-Diploma/svg/002-facebook-logo.svg");
+	background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/002-facebook-logo.svg");
 	background-size: cover;
 }
 
 .footer-instagram {
-	background-image: url("/MQ-Diploma/svg/005-instagram.svg");
+	background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/005-instagram.svg");
 }
 
 .footer-tumblr {
-	background-image: url("/MQ-Diploma/svg/003-tumblr.svg");
+	background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/003-tumblr.svg");
 }
 
 .copyright {
@@ -642,4 +770,329 @@ a.blog-post-info-author {
 	display: block;
 	text-align: center;
 	margin-top: 30px;
+}
+
+/* ===================================MOBILE 360px CUSTOMIZED============================= */
+@media (max-width: 360px) {
+	.menu {
+		display: none;
+	}
+
+	.head-container-wrapper button {
+		display: block;
+	}
+
+	.menu-button {
+		width: 25px;
+		height: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: transparent;
+		border: 0px;
+		margin-left: auto;
+		padding-right: 15px;
+	}
+
+	.burger {
+		width: 100%;
+		height: 4px;
+		background: white;
+		position: relative;
+		display: block;
+	}
+
+	.burger:before {
+		width: 100%;
+		height: 4px;
+		background: white;
+		position: absolute;
+		content: "";
+		top: -10px;
+		left: 0;
+	}
+
+	.burger:after {
+		width: 100%;
+		height: 4px;
+		background: white;
+		position: absolute;
+		content: "";
+		bottom: -10px;
+		left: 0;
+	}
+
+	.head-container {
+		background-image: url("https://github.com/ShlackBaum/MQ-Diploma/blob/main/images/banner-mobile.jpg?raw=true");
+	}
+
+	.logo-menu-flex {
+		text-align: center;
+		display: block;
+		padding-top: 185px;
+	}
+
+	.header-text {
+		font-size: 26px;
+		padding-top: 40px;
+	}
+
+	.trends-flex {
+		flex-wrap: wrap;
+	}
+
+	.trand-box {
+		max-width: 100%;
+		flex-basis: 100%;
+		margin-top: 3px;
+		height: 230px;
+	}
+
+	.trand-header {
+		font-size: 16px;
+	}
+
+	.trand-content {
+		padding-top: 33px;
+		padding-left: 20px;
+		padding-bottom: 33px;
+		padding-right: 20px;
+		margin-left: 20px;
+		margin-right: 20px;
+		margin-bottom: 10px;
+		margin-top: 20px;
+	}
+
+	.main {
+		max-width: 100%;
+	}
+
+	.main-container {
+		max-width: 100%;
+	}
+
+	.blog-post-content {
+		margin-left: 0px;
+		padding-top: 10px;
+	}
+
+	.blog-post-pic,
+	.blog-post-pic img {
+		width: 100%;
+	}
+
+	.aside {
+		max-width: 100%;
+	}
+
+	.blog-post {
+		flex-wrap: wrap;
+		margin-bottom: 30px;
+	}
+
+	.blog-post::after {
+		content: "";
+		display: block;
+		background-color: #eeeeee;
+		width: 100%;
+		height: 4px;
+		margin: 15px auto 0;
+	}
+
+	.blog-post-header {
+		margin-top: 10px;
+		font-size: 16px;
+	}
+
+	.blog-post-info {
+		margin-top: 10px;
+	}
+
+	.blog-post-text {
+		margin-top: 10px;
+		font-size: 14px;
+	}
+
+	.aside {
+		width: 100%;
+		margin-top: 30px;
+	}
+
+	.aside-tag {
+		padding: 4px 10px;
+	}
+
+	button {
+		padding-right: 0px;
+	}
+
+	.goods-flex {
+		flex-wrap: wrap;
+		flex-direction: column;
+	}
+
+	.goods-box {
+		width: calc(100% - 85px);
+		margin: auto;
+		margin-top: 20px;
+	}
+
+	.footer {
+		margin-top: 50px;
+	}
+}
+
+/* ===================================TABLET 361-768 px CUSTOMIZED============================= */
+
+@media (min-width: 361px) and (max-width: 768px) {
+	.menu {
+		display: none;
+	}
+
+	.head-container-wrapper {
+		padding-left: 35px;
+		padding-right: 35px;
+	}
+
+	.head-container-wrapper button {
+		display: block;
+	}
+
+	.menu-button {
+		width: 25px;
+		height: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: transparent;
+		border: 0px;
+		margin-left: auto;
+		padding-right: 15px;
+	}
+
+	.burger {
+		width: 100%;
+		height: 4px;
+		background: white;
+		position: relative;
+		display: block;
+	}
+
+	.burger:before {
+		width: 100%;
+		height: 4px;
+		background: white;
+		position: absolute;
+		content: "";
+		top: -10px;
+		left: 0;
+	}
+
+	.burger:after {
+		width: 100%;
+		height: 4px;
+		background: white;
+		position: absolute;
+		content: "";
+		bottom: -10px;
+		left: 0;
+	}
+
+	.head-container {
+		background-image: url("https://github.com/ShlackBaum/MQ-Diploma/blob/main/images/banner-bg-tablet.jpg?raw=true");
+	}
+
+	.header-text {
+		font-size: 36px;
+		padding-top: 100px;
+	}
+
+	.main-container {
+		padding-left: 35px;
+		padding-right: 35px;
+	}
+
+	.trends-flex {
+		flex-wrap: wrap;
+	}
+
+	.trand-box {
+		max-width: calc(50% - 2px);
+		flex-basis: calc(50% - 2px);
+		margin-top: 4px;
+		height: 245px;
+	}
+
+	.main {
+		width: calc(100% - 720px);
+		padding-right: 35px;
+	}
+
+	.main-container {
+		max-width: 100%;
+	}
+
+	.blog-post-content {
+		margin-left: 0px;
+		padding-top: 10px;
+	}
+
+	.blog-post-pic,
+	.blog-post-pic img {
+		width: 100%;
+	}
+
+	.blog-post {
+		flex-wrap: wrap;
+		margin-bottom: 30px;
+	}
+
+	.blog-post::after {
+		content: "";
+		display: block;
+		background-color: #eeeeee;
+		width: 100%;
+		height: 4px;
+		margin: 15px auto 0;
+	}
+
+	.blog-post-header {
+		margin-top: 10px;
+		font-size: 16px;
+	}
+
+	.blog-post-info {
+		margin-top: 20px;
+	}
+
+	.blog-post-text {
+		margin-top: 20px;
+		font-size: 14px;
+	}
+
+	.goods-flex {
+		flex-wrap: wrap;
+		align-content: stretch;
+	}
+
+	.goods-box {
+		height: auto;
+		flex-basis: calc(50% - 100px);
+		display: flex;
+		flex-direction: column;
+		margin-top: 20px;
+	}
+	.goods-box:nth-child(odd) {
+		margin-left: 58px;
+	}
+
+	.goods-box:nth-child(even) {
+		margin-right: 58px;
+	}
+
+	.good-content {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+	}
 }
