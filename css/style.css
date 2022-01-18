@@ -180,14 +180,14 @@ button {
 
 .trand-content {
 	border: 3px solid rgb(181, 159, 91, 0.5);
-	padding-top: 40px;
-	padding-left: 35px;
-	padding-bottom: 35px;
-	padding-right: 35px;
-	margin-left: 20px;
-	margin-right: 20px;
-	margin-bottom: 10px;
-	margin-top: 20px;
+	padding-top: 5%;
+	padding-left: 10%;
+	padding-bottom: 5%;
+	padding-right: 10%;
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-bottom: 5%;
+	margin-top: 10%;
 	z-index: 3;
 	position: relative;
 }
@@ -236,7 +236,7 @@ button {
 .trand-header {
 	text-transform: uppercase;
 	color: white;
-	font-size: 1.25rem;
+	font-size: 100%;
 	line-height: 1.5rem;
 	font-weight: bold;
 }
@@ -908,6 +908,10 @@ a.blog-post-info-author {
 		height: 245px;
 	}
 
+	/* 	.trand-header {
+		font-size: 2.8vw;
+	} */
+
 	.main {
 		width: calc(100% - 720px);
 		padding-right: 35px;
@@ -1066,9 +1070,9 @@ a.blog-post-info-author {
 		height: 230px;
 	}
 
-	.trand-header {
+	/* 	.trand-header {
 		font-size: 1rem;
-	}
+	} */
 
 	.trand-content {
 		padding-top: 33px;
