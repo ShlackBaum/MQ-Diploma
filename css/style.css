@@ -562,6 +562,14 @@ a.blog-post-info-author {
 	border: none;
 }
 
+.aside-search-input:focus,
+.aside-mail-input:focus,
+.popup_how_often:focus,
+.popup_textarea:focus {
+	outline-color: #b59f5b;
+	outline-width: 1px;
+}
+
 .aside-search-button {
 	width: 48px;
 	height: 48px;
